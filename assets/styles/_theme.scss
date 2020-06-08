@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+$primary: mat-palette($mat-indigo, 'A700');
+$accent: mat-palette($mat-indigo, 500);
+$warn: mat-palette($mat-pink, 'A200');
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include mat-core();
+$custom-typography: mat-typography-config($font-family: 'Helvetica, sans-serif');
+
+@include mat-core($custom-typography);
+@include angular-material-theme($theme);

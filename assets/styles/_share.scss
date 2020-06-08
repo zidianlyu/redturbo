@@ -1,0 +1,175 @@
+@import './_screen';
+@import './_font';
+@import './_color';
+
+/** Contact | Courses | Programs | Navbar | Welcome Page. */
+@mixin size-nm-to-sm($property, $normal-size, $unit) {
+  #{$property}: $normal-size;
+
+  @media screen and (min-width: 600px) and (max-width: 959px) {
+    #{$property}: calc(#{$normal-size} - #{$unit});
+  }
+}
+
+@mixin size-nm-to-xs($property, $normal-size, $unit) {
+  @include size-nm-to-sm($property, $normal-size, $unit);
+
+  @media screen and (max-width: 599px) {
+    #{$property}: calc(#{$normal-size} - #{$unit * 2});
+  }
+}
+
+@mixin size-nm-to-mobile($property, $normal-size, $unit) {
+  @include size-nm-to-xs($property, $normal-size, $unit);
+
+  @media screen and (max-width: 359px) {
+    #{$property}: calc(#{$normal-size}- #{$unit} * 3);
+  }
+}
+
+@mixin size-sm-to-xs($property, $normal-size, $unit) {
+  @media screen and (min-width: 600px) and (max-width: 959px) {
+    #{$property}: $normal-size;
+  }
+
+  @media screen and (max-width: 599px) {
+    #{$property}: calc(#{$normal-size} - #{$unit});
+  }
+}
+
+/** Welcome | Subscription Page. */
+@mixin responsive-button {
+  button {
+    @include size-nm-to-xs(font-size, 14px, 2px);
+    @include size-nm-to-xs(padding-top, 3px, 1px);
+    @include size-nm-to-xs(padding-bottom, 3px, 1px);
+    @include size-nm-to-xs(padding-left, 12px, 1.5px);
+    @include size-nm-to-xs(padding-right, 12px, 1.5px);
+  }
+}
+
+/** Grads Page. */
+@mixin transition-hover-effect($property, $before, $after, $time) {
+  #{$property}: $before;
+  transition: #{$property} #{$time};
+
+  &:hover {
+    #{$property}: $after;
+    transition: #{$property} #{$time};
+  }
+}
+
+/** Grads Page. */
+@mixin even-width($start) {
+  width: calc(100% / #{$start});
+
+  @media screen and (min-width: 600px) and (max-width: 959px) {
+    width: calc(100% / (#{$start} - 1));
+  }
+
+  @media screen and (max-width: 599px) {
+    width: calc(100% / (#{$start} - 2));
+  }
+}
+
+/** Footer | Contact | Grads | Programs | Welcome | Courses Page. */
+@mixin page-container-padding() {
+  margin: 0 auto;
+  padding: 120px 100px 80px;
+
+  @media screen and (min-width: 600px) and (max-width: 959px) {
+    padding: 90px 96px 75px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 95px 64px 50px;
+  }
+
+  @media screen and (max-width: 599px) {
+    padding: 90px 36px 28px;
+  }
+}
+
+/** Contact | Courses | Grads | Programs page. */
+@mixin page-max-width-limit($max-width) {
+  div.max-width-limit {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+/** Contact | Message Page. */
+@mixin message-card-hover {
+  @include size-nm-to-xs(padding, 50px, 10px);
+  @include transition-hover-effect(box-shadow, -20px 20px 20px $mat-grey-400, -30px 30px 30px $mat-grey-400, 0.8s);
+  background: $mat-grey-100;
+}
+
+/** Contact | Courses | Grads | Programs Page. */
+@mixin section-top-format {
+  #section-top {
+    margin: 0 auto;
+
+    div.title {
+      @include font($font-muli, 900, inherit, inherit, inherit);
+      @include size-nm-to-xs(font-size, 45px, 6px);
+      @include size-nm-to-xs(margin-top, 15px, 5px);
+      @include size-nm-to-xs(margin-bottom, 35px, 7.5px);
+      text-align: center;
+    }
+
+    div.summary {
+      @include font($font-muli, 300, $grey-888, 0.5px, 24px);
+      @include size-nm-to-xs(font-size, 18px, 2px);
+      @include size-nm-to-xs(line-height, 30px, 3px);
+    }
+  }
+}
+
+/** Contact | Courses | Programs Page. */
+@mixin image-fit($position: inherit, $overflow: inherit) {
+  position: $position;
+  overflow: $overflow;
+
+  img {
+    height: 100%;
+    width: 100%
+  }
+}
+
+/** Footer | Courses Page. */
+@mixin width-setting-to-xs($width, $max-width, $width-xs, $max-width-xs) {
+  width: $width;
+  max-width: $max-width;
+
+  @media screen and (max-width: 599px) {
+    width: $width-xs;
+    max-width: $max-width-xs;
+  }
+}
+
+/** Contact | Courses Page. */
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+/** Contact | Welcome Page. */
+@mixin min-height-setting($normal, $xs) {
+  min-height: $normal;
+
+  @media screen and (max-width: 599px) {
+    min-height: $xs;
+  }
+}
+
+/** Courses | Grads Page. */
+@mixin pad-elevation($from, $to) {
+  @include mat-elevation($from);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    @include mat-elevation($to);
+    transition: box-shadow 0.3s;
+  }
+}

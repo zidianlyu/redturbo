@@ -1,0 +1,14 @@
+$mat-mobile: screen and (max-width: 359px);
+$mat-xs: screen and (max-width: 599px);
+$mat-gt-xs: screen and (min-width: 600px);
+$mat-sm: screen and (min-width: 600px) and (max-width: 959px);
+$mat-md: screen and (min-width: 960px) and (max-width: 1279px);
+
+/** Width restriction. */
+$mat-lt-width-660: screen and (max-width: 660px);
+$mat-lt-width-600: screen and (max-width: 600px);
+$mat-lt-width-440: screen and (max-width: 440px);
+
+/** Height restriction. */
+$mat-lt-height-600: screen and (max-height: 600px);
+/** Example: @media screen and (min-width: 600px) and (max-width: 959px) {...} */

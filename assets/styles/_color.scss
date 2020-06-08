@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+/** Material. */
+$mat-grey-100: mat-color($mat-grey, 100);
+$mat-grey-400: mat-color($mat-grey, 400);
+
+$mat-blue-grey-500: mat-color($mat-blue-grey, 500);
+$mat-blue-grey-600: mat-color($mat-blue-grey, 600);
+
+$mat-indigo-a400: mat-color($mat-indigo, 'A400');
+
+$mat-green-400: mat-color($mat-green, 400);
+$mat-green-700: mat-color($mat-green, 700);
+
+$mat-pink-a400: mat-color($mat-pink, 'A400');
+
+$mat-red-a400: mat-color($mat-red, 'A400');
+
+/** Normal. */
+$grey-222: #222;
+$grey-555: #555;
+$grey-666: #666;
+$grey-888: #888;
+$grey-999: #999;
+$grey-aaa: #aaa;
+$grey-ddd: #ddd;
+
+$white: #fff;
+$white-fa: #fafafa;
+$white-fc: #fcfcfc;
+$white-f7: #f7f7f7;
+$white-f9: #f9f9f9;
+$white-ccc: #ccc;
+$white-e7: #e7e7e7;
+$white-e0: #e0e0e0;
+
+$yellow: yellow;
+
+$dark-transparent:rgba(0, 0, 0, 0.075);
+$light-dark-transparent:rgba(0, 0, 0, 0.025);
+
+$welcome-background-cover: #343a40;

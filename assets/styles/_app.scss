@@ -1,0 +1,23 @@
+@import './_color';
+@import './_font';
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  background: $white-f9;
+  font-family: $font-poppins;
+}
+
+body {
+  margin: 0;
+  background: $white;
+}
+
+button {
+  font-family: $font-poppins;
+  text-transform: uppercase;
+  font-weight: 400;
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,bold');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,bold');
+@import url('https://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600,700,800,900,bold');
+@import url('https://fonts.googleapis.com/css?family=Graduate:100,200,300,400,500,600,700,800,900,bold');
+
+$font-poppins: 'Poppins',
+sans-serif;
+$font-roboto: 'Roboto',
+sans-serif;
+$font-muli: 'Muli',
+sans-serif;
+$font-digit: 'Graduate',
+sans-serif;
+$font-helvetica: 'Helvetica',
+sans-serif;
+
+@mixin font($family, $weight, $color, $letter-space, $line-height) {
+  font-family: $family;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $letter-space;
+  line-height: $line-height;
+}
